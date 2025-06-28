@@ -24,3 +24,9 @@ unset __mamba_setup
 To create a new environment, type ```micromamba create -n ENV_NAME python```.
 To activate environment, type ```micromamba activate ENV_NAME```.
 To list available environments, type in ```micromamba env list```.
+
+## Micromamba channels
+To list channels used, type in ```micromamba config list```
+Note that FHCC cannot install from conda-forge directly, and we have to use in-house version, which include:
+```https://conda-forge.fredhutch.org/bioconda/```
+```https://conda-forge.fredhutch.org/conda-forge/```
