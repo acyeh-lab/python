@@ -37,8 +37,9 @@ Note that FHCC cannot install from conda-forge directly, and we have to use in-h
 To install the proper channels, type in: 
 ```
 micromamba config set channel_alias https://conda-forge.fredhutch.org --file ~/.mambarc
-micromamba config --add channels conda-forge
-micromamba config --add channels bioconda
+micromamba config set channel_alias https://conda-forge.fredhutch.org --file ~/.condarc
+conda config --add channels conda-forge
+conda config --add channels bioconda
 ```
 
 
