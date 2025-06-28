@@ -21,6 +21,6 @@ unset __mamba_setup
 ```
 
 ## Micromamba environments
-To create a new environment, type ```micromamba create -n ENV_NAME python```
-To activate environment, type ```micromamba acivate ENV_NAME```
-To list available environments, type in ```micromamba env list```
+To create a new environment, type ```micromamba create -n ENV_NAME python```.
+To activate environment, type ```micromamba acivate ENV_NAME```.
+To list available environments, type in ```micromamba env list```.
