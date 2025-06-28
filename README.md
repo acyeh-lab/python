@@ -8,8 +8,8 @@ This automatically installs micromamba in the directory ```~/.local/bin```.  Mak
 ```
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'micromamba shell init' !!
-export MAMBA_EXE='/home/ayeh/.local/bin/micromamba';
-export MAMBA_ROOT_PREFIX='/home/ayeh/micromamba';
+export MAMBA_EXE='/home/ayeh/.local/bin/micromamba'; # Defines full path to mamba executable
+export MAMBA_ROOT_PREFIX='/home/ayeh/micromamba'; # Dictates where environments and packages are stored
 __mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__mamba_setup"
