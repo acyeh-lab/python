@@ -44,6 +44,33 @@ conda config --add channels bioconda
 ```
 
 ## Jupyter notebook environment setup
+```
+#!/bin/bash -
+#SBATCH --job-name=jupyter_server
+#SBATCH --output=/home/%u/jupyter_logs/%x_job-%j_%N.log
+#SBATCH --mem=300G
+#SBATCH --cpus-per-task=16#
+SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --time=10-00:00:00
+# Use the first command line argument as conda environment name
+envName="${1:-jupyterenv}"
+echo "Using the conda environment $envName"
+# make sure micromamba is enabled
+eval "$(micromamba shell hook --shell=bash)"
+
+# enter the environment
+micromamba activate "$envName"
+
+# make sure the module system is enabled
+source /etc/profile.d/modules.sh
+
+# If SLURM is managing CPUs, limit threads for numpy to optimize performance
+if [[ -n $SLURM_CPUS_PER_TASK ]]; then export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK export NUMEXPR_MAX_THREADS=$SLURM_CPUS_PER_TASK export NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASKfi# Navigate to the home directorycd "$HOME"# Start JupyterLab on the designated port numberjupyter lab --ip=$(hostname) --port=[your port] --no-browser
+
+
+
+http://[node name].fhcrc.org:56252 # Put random port number here
 
 
 
