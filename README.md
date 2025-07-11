@@ -44,6 +44,10 @@ conda config --add channels bioconda
 ```
 
 ## Jupyter notebook environment setup
+
+Create the following .sh script below and run it on the computing cluster with sbatch.  This should give you a node name that you can then paste into the following URL to access the jupyter environment:
+http://[node name].fhcrc.org:25032 # Put random port number here that is in the .sh script below
+
 ```
 #!/bin/bash -
 #SBATCH --job-name=jupyter_server
@@ -88,7 +92,6 @@ jupyter lab --ip=$(hostname) --port=25032 --no-browser
 ```
 
 
-http://[node name].fhcrc.org:56252 # Put random port number here
 
 
 
