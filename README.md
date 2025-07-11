@@ -67,7 +67,7 @@ source /etc/profile.d/modules.sh
 
 # If SLURM is managing CPUs, limit threads for numpy to optimize performance
 if [[ -n $SLURM_CPUS_PER_TASK ]]; then export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK export NUMEXPR_MAX_THREADS=$SLURM_CPUS_PER_TASK export NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASKfi# Navigate to the home directorycd "$HOME"# Start JupyterLab on the designated port numberjupyter lab --ip=$(hostname) --port=[your port] --no-browser
-
+```
 
 
 http://[node name].fhcrc.org:56252 # Put random port number here
