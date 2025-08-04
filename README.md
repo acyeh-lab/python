@@ -43,6 +43,19 @@ conda config --add channels conda-forge
 conda config --add channels bioconda
 ```
 
+Can change ```~/.mambarc``` (runtime configuration file to dictate what channel to install packages from). In YAML format:
+```
+channel_alias: https://my.local.repo/
+channels:
+  - local
+  - conda-forge
+channel_priority: strict
+```
+
+To install a package into a channel.  First, load the channel, than install package:
+``` micromamba activate ENV_NAME ```
+``` micromamba install -c conda-forge opencv ```
+
 ## Jupyter notebook environment setup
 
 Create the following .sh script below and run it on the computing cluster with sbatch.  This should give you a node name that you can then paste into the following URL to access the jupyter environment:
