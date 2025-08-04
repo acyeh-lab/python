@@ -53,8 +53,10 @@ channel_priority: strict
 ```
 
 To install a package into a channel.  First, load the channel, than install package:
-``` micromamba activate ENV_NAME ```
-``` micromamba install -c conda-forge opencv ```
+``` 
+micromamba activate ENV_NAME
+micromamba install -c conda-forge opencv
+```
 
 ## Jupyter notebook environment setup
 
