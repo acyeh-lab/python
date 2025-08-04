@@ -57,6 +57,9 @@ To install a package into a channel.  First, load the channel, than install pack
 micromamba activate ENV_NAME
 micromamba install -c conda-forge opencv
 ```
+Note that this will install from the directory "[channel_alias] / [channel_name] / [platform] / repodata.json", e.g. 
+```https://conda-forge.fredhutch.org/conda-forge/linux-64/repodata.json```, where the "repodata.json" is a compressed index of all available packages.
+
 
 ## Jupyter notebook environment setup
 
