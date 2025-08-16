@@ -24,8 +24,18 @@ unset __mamba_setup
 To create a new environment, type ```micromamba create -n ENV_NAME python```.
 
 To activate environment, type ```micromamba activate ENV_NAME```.
+To deactivate environment, type ```micromamba deactivate```.
 
 To list available environments, type in ```micromamba env list```.
+
+To install packages in an environment, activate it first then type in ```micromamba install ipykernel (or package of interest)```.
+
+To register an environment to a jupyter notebook kernel, install ipykernel in the activate environment: ```micromamba install ipykernel``` then register it:
+```
+python -m ipykernel install --user \
+  --name ENV_NAME \
+  --display-name "DISPLAY_NAME"
+```
 
 ## Micromamba channels
 To list channels used, type in ```micromamba config list```
