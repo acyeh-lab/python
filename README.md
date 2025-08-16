@@ -28,8 +28,6 @@ To deactivate environment, type ```micromamba deactivate```.
 
 To list available environments, type in ```micromamba env list```.
 
-To install packages in an environment, activate it first then type in ```micromamba install ipykernel (or package of interest)```.
-
 To register an environment to a jupyter notebook kernel, install ipykernel in the activate environment: ```micromamba install ipykernel``` then register it:
 ```
 python -m ipykernel install --user \
