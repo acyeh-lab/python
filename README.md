@@ -4,7 +4,7 @@ This page describes how to set up computing environments on the FHCC cluster, pa
 We use micromamba, see manual here: "https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html", which is a lightweight package manager that is employed in a similar fashion as conda.
 
 To install micromamba, use the following command: ```"${SHELL}" <(curl -L micro.mamba.pm/install.sh)```
-This automatically installs micromamba in the directory ```~/.local/bin```.  Make sure directory is in ```PATH``` environment variable in ```~/.bash_profile```. Can use the following code:
+This automatically installs micromamba in the directory ```~/.local/bin```.  Make sure directory is in ```PATH``` environment variable in ```~/.bash_profile```. After installing, the following was added to ".bash_profile":
 ```
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'micromamba shell init' !!
