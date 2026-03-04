@@ -78,9 +78,8 @@ micromamba create -n jupyterenv python-3.11 jupyterlab -c conda-forge
 ```
 
 Create password for jupyter notebook:
-```
-jupyter notebook password
-```
+Use token generated from log file and put in your new password
+
 
 Create the following .sh script below and run it on the computing cluster with sbatch.  This should give you a node name that you can then paste into the following URL to access the jupyter environment:
 ```
