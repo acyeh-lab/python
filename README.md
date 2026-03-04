@@ -129,7 +129,10 @@ jupyter lab --ip=$(hostname) --port=25032 --no-browser
 
 ```
 
-
+Now, in the jupyter notebook, open a terminal window and input the following symbolic link command:
+```
+ln -s /fh/fast/XXXX ~/fast
+```
 
 
 
