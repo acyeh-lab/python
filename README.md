@@ -134,5 +134,10 @@ Now, in the jupyter notebook, open a terminal window and input the following sym
 ln -s /fh/fast/XXXX ~/fast
 ```
 
+## Installing packages so that only environment is used:
 
+Go into the micromamba environment, then use:
+```
+python -s -m pip install --no-user --upgrade "git+https://github.com/JEFworks-Lab/STalign.git"
+```
 
