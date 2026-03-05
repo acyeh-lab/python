@@ -78,7 +78,7 @@ micromamba create -n jupyterenv python-3.11 jupyterlab -c conda-forge
 ```
 
 Create password for jupyter notebook:
-Use token generated from log file and put in your new password
+Use token generated from log file (see #SBATCH --output below) and put in your new password
 
 
 Create the following .sh script below and run it on the computing cluster with sbatch.  This should give you a node name that you can then paste into the following URL to access the jupyter environment:
@@ -89,7 +89,7 @@ http://[node name].fhcrc.org:25032 # Put random port number here that is in the 
 ```
 #!/bin/bash -
 #SBATCH --job-name=jupyter_server
-#SBATCH --output=/home/%u/jupyter_logs/%x_job-%j_%N.log
+#SBATCH --output=/jupyter_logs/%x_job-%j_%N.log
 #SBATCH --mem=32G
 #SBATCH --cpus-per-task=1
 #SBATCH --nodes=1
