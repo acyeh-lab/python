@@ -34,6 +34,40 @@ python -m ipykernel install --user \
   --name ENV_NAME \
   --display-name "DISPLAY_NAME"
 ```
+To make sure that jupyter doesn't load user-default installs and only looks into the micromamba environment, find the path to your kernel and open kernel.json:
+```
+jupyter kernelspec list
+```
+Change the file from:
+```
+{
+  "argv": [
+    "/home/ayeh/micromamba/envs/stalign-clean/bin/python",
+    "-m",
+    "ipykernel_launcher",
+    "-f",
+    "{connection_file}"
+  ],
+  "display_name": "Python (stalign)",
+  "language": "python"
+}
+```
+to:
+```
+{
+  "argv": [
+    "/home/ayeh/micromamba/envs/stalign-clean/bin/python",
+    "-s",
+    "-m",
+    "ipykernel_launcher",
+    "-f",
+    "{connection_file}"
+  ],
+  "display_name": "Python (stalign)",
+  "language": "python"
+}
+```
+Note the "-s" flag.
 
 ## Micromamba channels
 To list channels used, type in ```micromamba config list```
