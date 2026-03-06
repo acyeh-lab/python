@@ -45,7 +45,7 @@ Change the file from:
 ```
 {
   "argv": [
-    "/home/ayeh/micromamba/envs/stalign-clean/bin/python",
+    "/home/ayeh/micromamba/envs/stalign/bin/python",
     "-m",
     "ipykernel_launcher",
     "-f",
@@ -59,7 +59,7 @@ to:
 ```
 {
   "argv": [
-    "/home/ayeh/micromamba/envs/stalign-clean/bin/python",
+    "/home/ayeh/micromamba/envs/stalign/bin/python",
     "-s",
     "-m",
     "ipykernel_launcher",
